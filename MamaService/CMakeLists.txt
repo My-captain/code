@@ -5,8 +5,10 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 include_directories(/usr/local/include)
-#target_link_libraries(/usr/local/lib/libmodel_slice_reader.so)
+link_directories(/usr/local/lib)
 
 add_executable(code
         MamaService.cpp
         )
+
+target_link_libraries(code model_slice_reader)
